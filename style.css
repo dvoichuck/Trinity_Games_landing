@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("images/fon.png");
+    background-size: cover;
+}
+
+
+@font-face {
+    font-family: Gameria; /* Имя шрифта */
+    src: url(GAMERIA.ttf); /* Путь к файлу со шрифтом */
+}
+
+#allBlock {
+    display: grid;
+    grid-template-rows: repeat(5, 100vh);
+}
+
+#firstBlock {
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#about {
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#game {
+    display: grid;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#contact {
+    display: grid;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#footer {
+    display: grid;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#footerBlock {
+    background: url(images/footer.png) center bottom no-repeat;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    background-size: 100%;
+}
+
+#planetGame {
+    grid-row: 3 / 10;
+    grid-column: 13 / 20;
+}
+
+#planetGameImg {
+    width: 100%;
+}
+
+#gameStudioText {
+    font: 20pt Gameria;
+    grid-row: 4 / 10;
+    grid-column: 5 / 13;
+    font-size: 100%;
+    line-height: 100%;
+}
+
+#firstText {
+    letter-spacing: 1px;
+    color: whitesmoke;
+}
+
+#secondText {
+    -webkit-text-stroke: 2px black;
+    letter-spacing: 2px;
+    color: #f8bd3a;
+}
+
+#cloud {
+    grid-row: 4 / 10;
+    grid-column: 2 / 5;
+}
+
+#cloudImg {
+    width: 100%;
+}
+
+#planet1Block {
+    grid-row: 1 / -1;
+    grid-column: 1 / 4;
+}
+
+#planet1 {
+    width: 100%;
+}
+
+#planet2Block {
+    grid-row: 1 / -1;
+    padding-top: calc(100vh - 25vw);
+    grid-column: 17 / 21;
+
+}
+
+#cloudDownImg {
+    position: absolute;
+    width: 10%;
+    left: 90%;
+}
+
+#planet2 {
+    width: 100%;
+}
+
+#logoBlock {
+    grid-row: 4 / 10;
+    grid-column: 8 / 14;
+}
+
+#logo {
+    width: 100%;
+}
+
+.menubar {
+    background-image: url("images/menu.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    grid-row: 1 / 4;
+    grid-column: 2 / 20;
+    padding-top: 1.5vw;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.button {
+    width: 11%;
+}
+
+.buttonImg:hover {
+    transform: scale(0.95);
+}
+
+.buttonImg {
+    width: 100%;
+}
+
+.comet {
+    width: 10vw;
+    overflow: hidden;
+    position: absolute;
+    display: none;
+}
+
+.sl_ctr{
+    position:relative;
+    grid-row: 3 / 9;
+    grid-column: 3 / 19;
+    overflow:hidden;
+}
+.sldr{
+    width: 10000px;
+    height: 100%;
+}
+.sldr img{
+    float:left;
+    width: 100%;
+    height: 100%;
+}
+
+.prv_b {
+    left:10px;
+    background:url(images/prv.png) no-repeat;
+}
+.nxt_b {
+    right:10px;
+    background:url(images/nxt.png) no-repeat;
+}
+
+.prv_b, .nxt_b{
+    position:absolute;
+    top:135px;
+    display:block;
+    width:35px;
+    height:35px;
+    cursor:pointer;
+}
+
+.prv_b:hover, .nxt_b:hover{opacity:.6;}
+
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+.animatedFadeInUp {
+    opacity: 0
+}
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
