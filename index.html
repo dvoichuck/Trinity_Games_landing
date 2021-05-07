@@ -6,12 +6,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="simple-adaptive-slider/simple-adaptive-slider.min.css">
     <script defer src="simple-adaptive-slider/simple-adaptive-slider.min.js"></script>
+    <script>
+        $(function() {
+            $.scrollify({
+                section : ".allBlock",
+            });
+        });
+    </script>
+    <script src="scrollify.js"></script>
 </head>
 <body>
 
-                                        <!-- BLOCK 1 - Main -->
-    <div id="allBlock">
-        <div class="allBlock" id="firstBlock" name="first">
+
+    <div id="mainBlock">
+                                <!-- BLOCK 1 - Main -->
+        <section class="allBlock" id="firstBlock" name="first">
             <img alt="comet" class="comet" id="comet1" src="images/Mitiors%20Animation.png">
             <img alt="comet" class="comet" id="comet2" src="images/Mitiors%20Animation.png">
             <img alt="comet" class="comet" id="comet3" src="images/Mitiors%20Animation.png">
@@ -46,10 +55,10 @@
                         </a>
                     </div>
                 </div>
-        </div>
+        </section>
 
                                     <!-- BLOCK 2  - About -->
-        <div class="allBlock" id="about">
+        <section class="allBlock" id="about">
               <div id="planetGame">
                   <img alt="planetGame" src="images/planet%20game.png" id="planetGameImg">
               </div>
@@ -94,9 +103,9 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
                                             <!-- BLOCK 3 - Game  -->
-        <div class="allBlock" id="game">
+        <section class="allBlock" id="game">
             <div class="sl_ctr">
                 <div class="prv_b"></div>
                 <div class="nxt_b"></div>
@@ -128,9 +137,9 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
                                         <!-- BLOCK 4 - Contact   -->
-        <div class="allBlock" id="contact">
+        <section class="allBlock" id="contact">
             <!--    Menu bar        -->
             <div class="menubar animated animatedFadeInUp fadeInUp">
                 <div class="button">
@@ -152,13 +161,13 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
                              <!-- BLOCK 5 - Footer -->
-        <div class="allBlock" id="footer">
+        <section class="allBlock" id="footer">
             <div id="footerBlock">
 <!--                <img alt="footer" id="footerImg" src="images/footer.png">-->
             </div>
-        </div>
+        </section>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="script.js"></script>

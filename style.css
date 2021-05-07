@@ -18,7 +18,7 @@ body {
     src: url(GAMERIA.ttf); /* Путь к файлу со шрифтом */
 }
 
-#allBlock {
+#mainBlock {
     display: grid;
     grid-template-rows: repeat(5, 100vh);
 }
@@ -60,14 +60,14 @@ body {
     grid-row-start: 5;
     grid-row-end: 6;
     grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    /*grid-template-rows: repeat(1, 1fr);*/
 }
 
 #footerBlock {
     background: url(images/footer.png) center bottom no-repeat;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
-    background-size: 100%;
+    background-size: 100vw;
 }
 
 #planetGame {
