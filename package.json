@@ -1,5 +1,24 @@
 {
   "dependencies": {
-    "jquery-scrollify": "^1.0.21"
-  }
+    "express": "^4.17.1",
+    "jquery-scrollify": "^1.0.21",
+    "rootpath": "^0.1.2"
+  },
+  "name": "trinity_games_landing",
+  "version": "1.0.0",
+  "description": "landing web page of trinity games studio",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvoichuck/Trinity_Games_landing.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dvoichuck/Trinity_Games_landing/issues"
+  },
+  "homepage": "https://github.com/dvoichuck/Trinity_Games_landing#readme"
 }
