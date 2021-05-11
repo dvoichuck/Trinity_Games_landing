@@ -7,7 +7,7 @@ app.use(express.static(publicDir));
 
 // rendering a web page
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(publicDir + "index.html");
 });
 
 // start server
