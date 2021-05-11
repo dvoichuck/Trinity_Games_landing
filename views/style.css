@@ -198,7 +198,7 @@ body {
     color: #eeeeee;
     font-size: 2vw;
     position: absolute;
-    left: 13.4%;
+    left: 13.6%;
     top: 2vw;
 }
 
@@ -207,7 +207,7 @@ body {
     color: #eeeeee;
     font-size: 2vw;
     position: absolute;
-    left: 46.7%;
+    left: 46.5%;
     top: 2vw;
 }
 
@@ -216,9 +216,11 @@ body {
     color: #eeeeee;
     font-size: 2vw;
     position: absolute;
-    left: 78.9%;
+    left: 79%;
     top: 2vw;
 }
+
+
 
 .comet {
     width: 10vw;
@@ -227,42 +229,85 @@ body {
     display: none;
 }
 
-.sl_ctr{
-    position:relative;
-    grid-row: 3 / 9;
-    grid-column: 3 / 19;
-    overflow:hidden;
+.container {
+    max-width: 700px;
+    margin: 0 auto;
 }
-.sldr{
-    width: 10000px;
+
+.slider {
+    grid-row: 4 / 10;
+    grid-column: 5 / 17;
+}
+
+.slider__wrapper {
     height: 100%;
 }
-.sldr img{
-    float:left;
-    width: 100%;
+
+.slider__container {
     height: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.prv_b {
-    left:10px;
-    background:url(images/prv.png) no-repeat;
-}
-.nxt_b {
-    right:10px;
-    background:url(images/nxt.png) no-repeat;
+.slider__items {
+    height: 100%;
+    counter-reset: slide;
 }
 
-.prv_b, .nxt_b{
-    position:absolute;
-    top:135px;
-    display:block;
-    width:35px;
-    height:35px;
-    cursor:pointer;
+.slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    counter-increment: slide;
+    height: 100%;
+    position: relative;
 }
 
-.prv_b:hover, .nxt_b:hover{opacity:.6;}
+.slider__item::before {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+}
 
+.slider__item:nth-child(1) {
+    background-color: #f44336;
+}
+
+.slider__item:nth-child(2) {
+    background-color: #9c27b0;
+}
+
+/*.slider__item:nth-child(3) {*/
+/*    background-color: #3f51b5;*/
+/*}*/
+
+/*.slider__item:nth-child(4) {*/
+/*    background-color: #03a9f4;*/
+/*}*/
+
+/*.slider__item:nth-child(5) {*/
+/*    background-color: #4caf50;*/
+/*}*/
+
+.googlePlay {
+    position: absolute;
+    right: calc(1.5vw + 10%);
+    bottom: 1vw;
+    width: 10%;
+    height: 5%;
+}
+
+.appStore {
+    position: absolute;
+    right: 1vw;
+    bottom: 1vw;
+    width: 10%;
+    height: 5%;
+}
 
 @-webkit-keyframes fadeInUp {
     from {
