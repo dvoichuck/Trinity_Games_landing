@@ -1,30 +1,39 @@
-setInterval(comet, 3000, "1")
+setInterval(comet, 3100, "1")
 
 setInterval(comet, 3500, "2")
 
 setInterval(comet, 4000, "3")
 
+
+let height = window.innerHeight
+let width = window.innerWidth
+let speed = 0
+
 function comet (arg) {
-    let randomWidth = getRandomInt(window.innerWidth)
-    let height = window.innerHeight
-    let speed = 0
-    if (randomWidth < window.innerWidth / 2) {
-        speed = randomWidth * 2.5
-    }
-    else {
-        speed = randomWidth
-    }
+    let randomHeight = getRandomInt(height)
+    let randomWidth = getRandomInt(width)
     let comet = "#comet" + arg
-    if (window.innerWidth / 10 * 7 < randomWidth) {
-        randomWidth -= window.innerWidth / 15.0
+    if (window.innerWidth > window.innerHeight) {
+    } else {
+        speed = 3000
+        console.log("randomHeight = " + randomHeight + " width = " + width + " height = " + height + " bottom = " + height + " - " + randomHeight)
+            $(comet).css({display: 'block', top: randomHeight, right: 0, opacity: 1}).animate({
+                top: width + randomHeight,
+                right: width,
+                opacity: 0
+            }, speed)
+
     }
-    if (randomWidth < height) {
-        height = randomWidth;
-        $(comet).css({display: 'block', top: 0, left: randomWidth, opacity: 0.8}).animate({top: height, left: 0, opacity: 0}, speed)
-    }
-    else {
-        $(comet).css({display: 'block', top: 0, left: randomWidth, opacity: 1}).animate({top: window.innerHeight, left: randomWidth / 2 - window.innerWidth / 10, opacity: 0}, speed)
-    }
+}
+
+function cometTop(arg) {
+    let randomHeight = getRandomInt(height)
+    let randomWidth = getRandomInt(width)
+    $(comet).css({display: 'block', top: 0, left: randomWidth, opacity: 0.8}).animate({
+        top: randomWidth,
+        left: 0,
+        opacity: 0
+    }, speed)
 }
 
 function getRandomInt(max) {
