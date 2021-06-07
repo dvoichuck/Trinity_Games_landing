@@ -56,19 +56,47 @@ body {
 }
 
 #footer {
-    display: grid;
     grid-row-start: 5;
     grid-row-end: 6;
-    grid-template-columns: repeat(20, 1fr);
-    /*grid-template-rows: repeat(1, 1fr);*/
+    background: url(images/footer.png) center bottom no-repeat;
+    background-size: 100vw;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-#footerBlock {
-    background: url(images/footer.png) center bottom no-repeat;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    background-size: 100vw;
+.footer_elem {
+    color: #f8bd3a;
+    font: 20pt Gameria;
+    align-items: center;
+    font-size: 2vw;
+    width: 30vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
 }
+
+#youtube {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+#footer_block {
+    display: flex;
+    justify-content: space-around;
+    /*flex-direction: column;*/
+    align-items: flex-end;
+}
+
+.navigation_footer {
+    color: #f8bd3a;
+}
+
 
 #planetGame {
     grid-row: 4 / 10;
@@ -90,15 +118,14 @@ body {
 
 #firstText {
     grid-row: 1 / 2;
-
+    letter-spacing: 2px;
     color: whitesmoke;
 }
 
 #secondText {
     grid-row: 3/4;
     -webkit-text-stroke: 0.05em black;
-    /*margin-top: 10%;*/
-    /*letter-spacing: 2px;*/
+    letter-spacing: 2px;
     color: #f8bd3a;
 }
 
@@ -120,6 +147,7 @@ body {
     font-size: 1.6vw;
     position: absolute;
     left: 21.7%;
+    letter-spacing: 2px;
     padding-top: 0.4vw;
     /*top: 1em;*/
 }
@@ -273,25 +301,9 @@ body {
     display: block;
 }
 
-.slider__item:nth-child(1) {
-    background-color: #f44336;
-}
-
 .slider__item:nth-child(2) {
     background-color: #9c27b0;
 }
-
-/*.slider__item:nth-child(3) {*/
-/*    background-color: #3f51b5;*/
-/*}*/
-
-/*.slider__item:nth-child(4) {*/
-/*    background-color: #03a9f4;*/
-/*}*/
-
-/*.slider__item:nth-child(5) {*/
-/*    background-color: #4caf50;*/
-/*}*/
 
 .googlePlay {
     position: absolute;
